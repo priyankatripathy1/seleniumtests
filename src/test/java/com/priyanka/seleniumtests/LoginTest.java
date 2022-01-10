@@ -79,7 +79,7 @@ public class LoginTest {
 
         driver.findElement(By.linkText("Jewelry")).click();
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
 
