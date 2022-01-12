@@ -19,9 +19,12 @@ public class Checkboxes {
 
 
     //for selecting all checkboxes
+//        for(WebElement chk:checkboxes){
+//            chk.click();
+//        }
     for(int i=0;i<=checkboxes.size();i++){
-        checkboxes.get(i).click();
-    }
+       checkboxes.get(i).click();
+   }
 
     //select multiple checkbox of ur choice
 

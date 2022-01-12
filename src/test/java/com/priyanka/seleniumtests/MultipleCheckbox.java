@@ -21,7 +21,7 @@ public class MultipleCheckbox {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.get("https://www.1800flowers.com");
         driver.findElement(By.id("zipcode-native-label-placeholder")).sendKeys("30066");
-        Thread.sleep(2000);
+
 
 
         //Approach 1
@@ -36,18 +36,32 @@ public class MultipleCheckbox {
         selectoptionfromDropdown(occasionele, "Anniversary");
 
         WebElement whenArriveele = driver.findElement(By.id("arrive-native-label-placeholder"));
-        selectoptionfromDropdown(whenArriveele, "Friday, jan 14");
+        selectoptionfromDropdown(whenArriveele, "Sunday, Jan 16");
+        Thread.sleep(2000);
+        driver.close();
     }
 
     public static void selectoptionfromDropdown(WebElement ele, String value) {
         Select drp = new Select(ele);
         List<WebElement> alloptions = drp.getOptions();
         for (WebElement option : alloptions) {
-            if (option.getText().equals(value)) {
+            if (option.getText().equalsIgnoreCase(value)) {
                 option.click();
                 break;
             }
         }
     }
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
